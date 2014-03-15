@@ -10,6 +10,9 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+#define UICOLORTINT [UIColor magentaColor]
+#define UIBACKGROUND [UIColor darkGrayColor]
+
 @property (strong, nonatomic) UIWindow *window;
 
 @end
