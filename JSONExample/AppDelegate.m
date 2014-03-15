@@ -18,7 +18,8 @@
     window = [[[UIApplication sharedApplication] delegate] window];
     window.tintColor = UICOLORTINT;
     window.backgroundColor = UIBACKGROUND;
-
+    
+    [[UINavigationBar appearance] setBarTintColor:UIBACKGROUND];
     [[UITabBar appearance] setBarTintColor:UIBACKGROUND];
 
     return YES;

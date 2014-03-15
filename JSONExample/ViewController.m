@@ -14,6 +14,7 @@
 static NSString *const BaseURLSring = @"http://lump.co/";
 
 @interface ViewController () <NHBalancedFlowLayoutDelegate>
+@property (weak, nonatomic) IBOutlet UINavigationItem *thisNavigationItem;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 //@property (weak, nonatomic) IBOutlet UITextView *jsonText;
 @property (strong, nonatomic) NSArray *json;
@@ -118,6 +119,8 @@ static NSString *const BaseURLSring = @"http://lump.co/";
     
 //    NHBalancedFlowLayout *layout = (NHBalancedFlowLayout *)self.collectionViewLayout;
     [self getJson:@"Hello"];
+    
+    self.thisNavigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navbar_logo"]];
 }
 
 - (void)didReceiveMemoryWarning
