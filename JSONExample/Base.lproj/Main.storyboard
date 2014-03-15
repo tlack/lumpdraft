@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="iov-xM-Q3a">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,20 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7h-2L-Gu4">
-                                <rect key="frame" x="137" y="20" width="47" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="LUMP!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="getJson:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="stI-Mo-xXy"/>
-                                </connections>
-                            </button>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hSQ-LQ-fUv">
-                                <rect key="frame" x="0.0" y="58" width="320" height="510"/>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hSQ-LQ-fUv">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewLayout key="collectionViewLayout" id="YFs-2z-xh8" customClass="NHBalancedFlowLayout"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LumpCell" id="Y0m-JM-coo" customClass="LumpPhotoCell">
@@ -82,22 +71,77 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hSQ-LQ-fUv" firstAttribute="top" secondItem="W7h-2L-Gu4" secondAttribute="bottom" constant="8" symbolic="YES" id="Kc9-nR-iGi"/>
-                            <constraint firstItem="W7h-2L-Gu4" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="20" symbolic="YES" id="PLS-bY-DIw"/>
-                            <constraint firstItem="hSQ-LQ-fUv" firstAttribute="centerX" secondItem="W7h-2L-Gu4" secondAttribute="centerX" id="Srb-bp-x1N"/>
                             <constraint firstItem="hSQ-LQ-fUv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="UWc-gE-HJa"/>
                             <constraint firstAttribute="trailing" secondItem="hSQ-LQ-fUv" secondAttribute="trailing" id="bPA-Ua-WDm"/>
                             <constraint firstAttribute="bottom" secondItem="hSQ-LQ-fUv" secondAttribute="bottom" id="uoY-tz-9iN"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="Soj-iF-tGw"/>
                     <connections>
                         <outlet property="collectionView" destination="hSQ-LQ-fUv" id="JfF-XR-LhP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1011" y="-347"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IOg-8M-N1g">
+            <objects>
+                <viewController id="IXz-DH-wKU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hju-bc-pe4"/>
+                        <viewControllerLayoutGuide type="bottom" id="fad-1f-g2b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dYQ-OH-N1H">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="Ff8-mG-6EX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mha-CX-IAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="999" y="402"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="teW-NG-SIE">
+            <objects>
+                <viewController id="BDj-NA-4Hj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DPR-Ok-reP"/>
+                        <viewControllerLayoutGuide type="bottom" id="0uP-Ke-2xh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jfd-nO-TAX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="LlU-tU-daO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HLC-tP-Hui" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="979" y="1169"/>
+        </scene>
+        <!--Tab Bar Controller - LUMP-->
+        <scene sceneID="0lA-uh-TkZ">
+            <objects>
+                <tabBarController title="LUMP" automaticallyAdjustsScrollViewInsets="NO" id="iov-xM-Q3a" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="cg6-Ai-ACa">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="G3S-Qm-yuV"/>
+                        <segue destination="IXz-DH-wKU" kind="relationship" relationship="viewControllers" id="geG-53-dwS"/>
+                        <segue destination="BDj-NA-4Hj" kind="relationship" relationship="viewControllers" id="2Q0-8d-s5m"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dyq-b5-A6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="443" y="107"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

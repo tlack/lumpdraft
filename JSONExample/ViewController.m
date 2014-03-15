@@ -24,7 +24,9 @@ static NSString *const BaseURLSring = @"http://lump.co/";
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(NHBalancedFlowLayout *)collectionViewLayout preferredSizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     NSDictionary *lump = [self.json objectAtIndex:indexPath.item];
-    CGSize thumbSize = CGSizeFromString([NSString stringWithFormat:@"{%@, %@}", lump[@"pic"][@"thumbnail_width"], lump[@"pic"][@"thumbnail_height"]]);
+    NSString* thumbSizeStr = [NSString
+                          stringWithFormat:@"{%@, %@}", lump[@"pic"][@"thumbnail_width"], lump[@"pic"][@"thumbnail_height"]];
+    CGSize thumbSize = CGSizeFromString(thumbSizeStr);
     return thumbSize;
 }
 
@@ -55,6 +57,8 @@ static NSString *const BaseURLSring = @"http://lump.co/";
 
     
     return cell;
+}
+- (IBAction)loadButtonClicked:(id)sender {
 }
 
 - (IBAction)getJson:(id)sender {
@@ -113,7 +117,7 @@ static NSString *const BaseURLSring = @"http://lump.co/";
 
     
 //    NHBalancedFlowLayout *layout = (NHBalancedFlowLayout *)self.collectionViewLayout;
-    
+    [self getJson:@"Hello"];
 }
 
 - (void)didReceiveMemoryWarning

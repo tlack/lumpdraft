@@ -12,7 +12,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // Startup
+    UIWindow* window;
+    
+    window = [[[UIApplication sharedApplication] delegate] window];
+    window.tintColor = UICOLORTINT;
+    window.backgroundColor = UIBACKGROUND;
+
+    [[UITabBar appearance] setBarTintColor:UIBACKGROUND];
+
     return YES;
 }
 							
